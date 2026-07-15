@@ -1,0 +1,48 @@
+---
+title: "PROSAIL inversion workflow"
+author: "Xuerui Guo"
+output: html_document
+---
+
+```{r setup, message=FALSE}
+source("../R/00_setup.R")
+source("../R/01_generate_PROSAIL_LUT.R")
+source("../R/02_resample_sensor_response.R")
+source("../R/03_invert_UAS_traits.R")
+```
+
+# Overview
+
+This notebook demonstrates the workflow used to:
+
+1. generate a PROSAIL look-up table;
+2. resample simulated spectra to the multispectral sensor bands;
+3. retrieve LAI, Cab, and LIDFa from a UAS raster.
+
+The full multi-date workflow is implemented in:
+
+```text
+R/04_run_all_dates.R
+```
+
+# Configuration
+
+Edit:
+
+```text
+config/config.yml
+```
+
+to specify the campaign rasters, output directories, sensor response, and
+processing settings.
+
+# Run the complete workflow
+
+```{r eval=FALSE}
+source("../R/04_run_all_dates.R")
+```
+
+# Notes
+
+The repository does not distribute the full UAS imagery. Users should provide
+their own reflectance rasters with the expected five-band order.

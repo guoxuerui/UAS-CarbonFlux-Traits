@@ -1,0 +1,38 @@
+prosail:
+  n_samples: 5000
+  seed: 42
+
+processing:
+  n_cores: 4
+  chunk_size: 1000
+
+sensor:
+  centers_nm: [475, 560, 668, 840, 717]
+  fwhm_nm: [20, 20, 10, 40, 10]
+  band_names: ["B1", "B2", "B3", "B5", "B4"]
+
+inputs:
+  spectral_prospect_r: "R/SpecPROSPECT_FullRange-data.R"
+  spectral_soil_r: "R/SpecSOIL-data.R"
+  spectral_atmosphere_r: "R/SpecATM-data.R"
+
+campaigns:
+  - date: "20230328"
+    input_raster: "example_data/Composite_20230328_Selhausen_ICOS_1m.tif"
+    output_directory: "outputs/20230328"
+
+  - date: "20230419"
+    input_raster: "example_data/Composite_20230419_Selhausen_ICOS_1m.tif"
+    output_directory: "outputs/20230419"
+
+  - date: "20230503"
+    input_raster: "example_data/Composite_20230503_Selhausen_ICOS_1m.tif"
+    output_directory: "outputs/20230503"
+
+  - date: "20230613"
+    input_raster: "example_data/Composite_20230613_Selhausen_ICOS_1m.tif"
+    output_directory: "outputs/20230613"
+
+  - date: "20230710"
+    input_raster: "example_data/Composite_20230710_Selhausen_ICOS_1m.tif"
+    output_directory: "outputs/20230710"
