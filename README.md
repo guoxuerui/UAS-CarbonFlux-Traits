@@ -1,6 +1,6 @@
 # UAS-CarbonFlux-Traits
 
-This repository contains the R scripts accompanying the manuscript:
+This repository contains the R and Python scripts accompanying the manuscript:
 
 "Joint Retrieval of Structural and Physiological Crop Traits from Optical and Thermal UAS Observations for Carbon Flux Modelling"
 
